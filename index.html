@@ -18,6 +18,7 @@
 </head>
 
 <body>
+<div class="effe"></div>
   		<div class="container" id="fix">	
 			<div class="os-phrases" id="os-phrases">
 				<h2>16 Years ago</h2>
@@ -37,9 +38,9 @@
     <script src="js/seq1/r1.js"></script>
     <script src="js/seq1/r2.js"></script>
     <script src="js/seq1/index.js"></script>
-    <script src="https://prinzhorn.github.io/skrollr/dist/skrollr.min.js"></script>
+    <script src="js/skrollr.js"></script>
 
-<script>
+<script id='letter-script'>
 var setSkrollr = function($el, data) {
     for (var i = 0, l = data.length; i < l; i++) {
         var d = data[i],
@@ -50,11 +51,14 @@ var setSkrollr = function($el, data) {
 }
 jQuery(function($) {
     setSkrollr($('.os-phrases h2:nth-child(1) > span > span > span'), [[0, 'text-shadow: 0 0 50px#fff;letter-spacing: 80px;opacity: 0;-webkit-transform: rotateY(-90deg);'], 
-    	[750, 'text-shadow: 0 0 1px #fff;letter-spacing: 14px;opacity: 0.8;-webkit-transform: rotateY(0deg);'],[1000, 'text-shadow: 0 0 1px #fff;opacity: 0.8;transform: rotateY(0deg)translateZ(100px);'],
-    	[1500, 'text-shadow: 0 0 10px #fff;opacity: 0; -webkit-transform: translateZ(130px);pointer-events: none']]);
-    setSkrollr($('.os-phrases h2:nth-child(2) > span > span > span'), [[1000, 'text-shadow: 0 0 50px#fff;letter-spacing: 80px;opacity: 0;-webkit-transform: rotateY(-90deg);'], 
-    	[1200, 'text-shadow: 0 0 1px #fff;letter-spacing: 14px;opacity: 0.8;-webkit-transform: rotateY(0deg);'],[1500, 'text-shadow: 0 0 1px #fff;opacity: 0.8;transform: rotateY(0deg)translateZ(100px);'],
-    	[1700, 'text-shadow: 0 0 10px #fff;opacity: 0; -webkit-transform: translateZ(130px);pointer-events: none']]);
+    	[1200, 'text-shadow: 0 0 1px #fff;letter-spacing: 14px;opacity: 0.8;-webkit-transform: rotateY(0deg);'],[1400, 'text-shadow: 0 0 1px #fff;opacity: 0.8;transform: rotateY(0deg)translateZ(100px);'],
+    	[2000, 'text-shadow: 0 0 10px #fff;opacity: 0; -webkit-transform: translateZ(130px);pointer-events: none']]);
+    setSkrollr($('.os-phrases h2:nth-child(2) > span > span > span'), [[1600, 'text-shadow: 0 0 50px#fff;letter-spacing: 80px;opacity: 0;-webkit-transform: rotateY(-90deg);'], 
+    	[2800, 'text-shadow: 0 0 1px #fff;letter-spacing: 14px;opacity: 0.8;-webkit-transform: rotateY(0deg);'],[3000, 'text-shadow: 0 0 1px #fff;opacity: 0.8;transform: rotateY(0deg)translateZ(100px);'],
+    	[3500, 'text-shadow: 0 0 10px #fff;opacity: 0; -webkit-transform: translateZ(130px);pointer-events: none']]);
+    setSkrollr($('.os-phrases h2:nth-child(3) > span > span > span'), [[3300, 'text-shadow: 0 0 50px#fff;letter-spacing: 80px;opacity: 0;-webkit-transform: rotateY(-90deg);'], 
+    	[4800, 'text-shadow: 0 0 1px #fff;letter-spacing: 14px;opacity: 0.8;-webkit-transform: rotateY(0deg);'],[5000, 'text-shadow: 0 0 1px #fff;opacity: 0.8;transform: rotateY(0deg)translateZ(100px);'],
+    	[6800, 'text-shadow: 0 0 10px #fff;opacity: 0; -webkit-transform: translateZ(130px);pointer-events: none']]);
 
     setSkrollr($('#box2'), [[0, '-webkit-transform:translateX(-100%)'], [750, 'transform:translateX(100%)'], [1500, 'transform:translateX(-100%)']]);
     
