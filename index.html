@@ -2,6 +2,8 @@
 <html >
 <head>
 <style>
+@import url('http://fonts.googleapis.com/css?family=Open+Sans');
+
 .specialtext {
   position: fixed;
   left: 50%;
@@ -12,7 +14,7 @@
 
 #text {
   font-size: 90px;
-  font-family: Righteous;
+  font-family: 'Open Sans', sans-serif;
   text-transform: uppercase;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -61,6 +63,7 @@
 <div class="effe"></div>
   		<div class="container" id="fix">	
 			<div class="os-phrases" id="os-phrases">
+				<h2>Let's go for a scroll?</h2>
 				<h2>16 Years ago</h2>
 				<h2>Something Began</h2>
 				<h2>We are Back again</h2>
@@ -101,7 +104,20 @@
             <g filter="url(#texteffect)">
                <rect id="top-rect" x="10" y="50" width="730" height="10" fill="#fff"></rect>
                <rect id="bottom-rect" x="730" y="170" width="730" height="10" fill="#fff"></rect>
-               <text id="text" x="375" y="150" text-anchor="middle" fill="#fff">Effervescence</text>
+               <text class="t1" id="text" x="50" y="150" text-anchor="middle" fill="#eee">E</text>
+               <text class="t2" id="text" x="100" y="150" text-anchor="middle" fill="#fff">f</text>
+               <text class="t3" id="text" x="150" y="150" text-anchor="middle" fill="#fff">f</text>
+               <text class="t4" id="text" x="210" y="150" text-anchor="middle" fill="#fff">e</text>
+               <text class="t5" id="text" x="270" y="150" text-anchor="middle" fill="#fff">r</text>
+               <text class="t6" id="text" x="320" y="150" text-anchor="middle" fill="#fff">v</text>
+               <text class="t7" id="text" x="380" y="150" text-anchor="middle" fill="#fff">e</text>
+               <text class="t8" id="text" x="430" y="150" text-anchor="middle" fill="#fff">s</text>
+               <text class="t9" id="text" x="490" y="150" text-anchor="middle" fill="#fff">c</text>
+               <text class="t10" id="text" x="550" y="150" text-anchor="middle" fill="#fff">e</text>
+               <text class="t11" id="text" x="610" y="150" text-anchor="middle" fill="#fff">n</text>
+               <text class="t12" id="text" x="670" y="150" text-anchor="middle" fill="#fff">c</text>
+               <text class="t13" id="text" x="720" y="150" text-anchor="middle" fill="#fff">e</text>
+
             </g>
          </mask>
       </defs>
@@ -127,16 +143,19 @@ var setSkrollr = function($el, data) {
     }
 }
 jQuery(function($) {
-    setSkrollr($('.os-phrases h2:nth-child(1) > span > span > span'), [[0, 'text-shadow: 0 0 50px#fff;letter-spacing: 80px;opacity: 0;-webkit-transform: rotateY(-90deg);'], 
+	setSkrollr($('.os-phrases h2:nth-child(1) > span > span > span'), [[0, 'text-shadow: 0 0 1px#fff;letter-spacing: 14px;opacity: 1;-webkit-transform: rotateY(-90deg);'], 
+    	[200, 'text-shadow: 0 0 1px #fff;letter-spacing: 14px;opacity: 0.8;-webkit-transform: rotateY(0deg);'],[400, 'text-shadow: 0 0 1px #fff;opacity: 0.8;transform: rotateY(0deg)translateZ(100px);'],
+    	[600, 'text-shadow: 0 0 10px #fff;opacity: 0; -webkit-transform: translateZ(130px);pointer-events: none']]);
+    setSkrollr($('.os-phrases h2:nth-child(2) > span > span > span'), [[0, 'text-shadow: 0 0 50px#fff;letter-spacing: 80px;opacity: 0;-webkit-transform: rotateY(-90deg);'], 
     	[1200, 'text-shadow: 0 0 1px #fff;letter-spacing: 14px;opacity: 0.8;-webkit-transform: rotateY(0deg);'],[1400, 'text-shadow: 0 0 1px #fff;opacity: 0.8;transform: rotateY(0deg)translateZ(100px);'],
     	[2000, 'text-shadow: 0 0 10px #fff;opacity: 0; -webkit-transform: translateZ(130px);pointer-events: none']]);
-    setSkrollr($('.os-phrases h2:nth-child(2) > span > span > span'), [[1400, 'text-shadow: 0 0 50px#fff;letter-spacing: 80px;opacity: 0;-webkit-transform: rotateY(-90deg);'], 
+    setSkrollr($('.os-phrases h2:nth-child(3) > span > span > span'), [[1400, 'text-shadow: 0 0 50px#fff;letter-spacing: 80px;opacity: 0;-webkit-transform: rotateY(-90deg);'], 
     	[2400, 'text-shadow: 0 0 1px #fff;letter-spacing: 14px;opacity: 0.8;-webkit-transform: rotateY(0deg);'],[2600, 'text-shadow: 0 0 1px #fff;opacity: 0.8;transform: rotateY(0deg)translateZ(100px);'],
     	[3000, 'text-shadow: 0 0 10px #fff;opacity: 0; -webkit-transform: translateZ(130px);pointer-events: none']]);
-    setSkrollr($('.os-phrases h2:nth-child(3) > span > span > span'), [[2400, 'text-shadow: 0 0 50px#fff;letter-spacing: 80px;opacity: 0;-webkit-transform: rotateY(-90deg);'], 
+    setSkrollr($('.os-phrases h2:nth-child(4) > span > span > span'), [[2400, 'text-shadow: 0 0 50px#fff;letter-spacing: 80px;opacity: 0;-webkit-transform: rotateY(-90deg);'], 
     	[3400, 'text-shadow: 0 0 1px #fff;letter-spacing: 14px;opacity: 0.8;-webkit-transform: rotateY(0deg);'],[4000, 'text-shadow: 0 0 1px #fff;opacity: 0.8;transform: rotateY(0deg)translateZ(100px);'],
     	[4400, 'text-shadow: 0 0 10px #fff;opacity: 0; -webkit-transform: translateZ(130px);pointer-events: none']]);
-    setSkrollr($('.os-phrases h2:nth-child(4) > span > span > span'), [[4000, 'text-shadow: 0 0 50px#fff;letter-spacing: 80px;opacity: 0;-webkit-transform: rotateY(-90deg);'], 
+    setSkrollr($('.os-phrases h2:nth-child(5) > span > span > span'), [[4000, 'text-shadow: 0 0 50px#fff;letter-spacing: 80px;opacity: 0;-webkit-transform: rotateY(-90deg);'], 
     	[4400, 'text-shadow: 0 0 1px #fff;letter-spacing: 14px;opacity: 0.8;-webkit-transform: rotateY(0deg);'],[5000, 'text-shadow: 0 0 1px #fff;opacity: 0.8;transform: rotateY(0deg)translateZ(100px);'],
     	[6000, 'text-shadow: 0 0 10px #fff;opacity: 0; -webkit-transform: translateZ(130px);pointer-events: none']]);
     
@@ -144,6 +163,17 @@ jQuery(function($) {
     setSkrollr($('#bottom-rect'), [[0, 'width:0;x:0;'], [6000, 'width:0;x:730;'],[6700, 'width:730px;bottom:0;x:10;']]);
 
     setSkrollr($('.faer'), [[0, 'opacity:0'], [6000, 'opacity:0;'],[6700, 'opacity:1;width:60%;']]);
+	setSkrollr($('.t1'), [[0, 'x:0;y:150;'], [6000, 'x:0;y:150;'],[6700, 'x:50;y:150;']]);
+    setSkrollr($('.t2'), [[0, 'x:0;y:150;'], [6000, 'x:200;y:150;'],[6700, 'x:100;y:150;']]);
+    setSkrollr($('.t3'), [[0, 'x:0;y:150;'], [6000, 'x:230;y:150;'],[6700, 'x:150;y:150;']]);
+    setSkrollr($('.t4'), [[0, 'x:0;y:150;'], [6000, 'x:390;y:150;'],[6700, 'x:210;y:150;']]);
+    setSkrollr($('.t5'), [[0, 'x:0;y:150;'], [6000, 'x:400;y:150;'],[6700, 'x:270;y:150;']]);
+    setSkrollr($('.t6'), [[0, 'x:0;y:150;'], [6000, 'x:410;y:150;'],[6700, 'x:320;y:150;']]);
+    setSkrollr($('.t7'), [[0, 'x:0;y:150;'], [6000, 'x:500;y:150;'],[6700, 'x:380;y:150;']]);
+    setSkrollr($('.t8'), [[0, 'x:0;y:150;'], [6000, 'x:20;y:150;'],[6700, 'x:430;y:150;']]);
+    setSkrollr($('.t9'), [[0, 'x:0;y:150;'], [6000, 'x:65;y:150;'],[6700, 'x:490;y:150;']]);
+
+
     
     skrollr.init({
         smoothScrolling: false
