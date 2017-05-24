@@ -62,16 +62,52 @@
   		<div class="container" id="fix">	
 			<div class="os-phrases" id="os-phrases">
 				<h2>16 Years ago</h2>
-				<h2>random text</h2>
-				<h2>random text2</h2>
-				<h2>random text3</h2>
-				<h2>Effervescence</h2>
+				<h2>Something Began</h2>
+				<h2>We are Back again</h2>
 				<h2>This September</h2>
-				<h2>We are back</h2>
-				<h2>For the best 3 days of your life</h2>
+				<h2>Effervescence</h2>
+				<!-- <h2>This September</h2> -->
+				<!-- <h2>We are back</h2> -->
+				<!-- <h2>For the best 3 days of your life</h2> -->
 			</div>
 		</div><!-- /container -->
-		<div class = "faer">  <button id ="lightsToggle" onclick=lightsOn()>Lights on/off</button><svg class="specialtext" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 750 200" preserveAspectRatio="xMidYMid meet" style="height:70%;width:70%"> <defs><filter id="texteffect"><feGaussianBlur in="SourceGraphic" stdDeviation="4"></feGaussianBlur><feComponentTransfer><feFuncA type="linear" slope="1.5" intercept="0"></feFuncA></feComponentTransfer><feComposite result="outer" in2="SourceGraphic" operator="out"></feComposite><feGaussianBlur result="pre-inner" in="SourceGraphic" stdDeviation="2"></feGaussianBlur><feComposite in="SourceGraphic" in2="pre-inner" operator="out"></feComposite><feComponentTransfer result="inner"><feFuncA type="linear" slope="7.5" intercept="0"></feFuncA></feComponentTransfer><feMerge><feMergeNode in="outer"></feMergeNode><feMergeNode in="inner"></feMergeNode></feMerge><feGaussianBlur stdDeviation="1"></feGaussianBlur></filter><linearGradient id="gradient" color-interpolation="sRGB" spreadMethod="repeat" x1="0" x2="0.5" y1="0.02" y2="0"><stop stop-color="#ef50d5" offset="0%"></stop><stop stop-color="#15f0f2" offset="33%"></stop><stop stop-color="#f2a415" offset="66%"></stop><stop stop-color="#ef50d5" offset="100%"></stop></linearGradient><mask id="textMask"><g filter="url(#texteffect)"><rect x="10" y="50" width="730" height="10" fill="#fff"></rect><rect x="10" y="170" width="830" height="10" fill="#fff"></rect><text id="text" x="375" y="150" text-anchor="middle" fill="#fff">Effervescence</text></g></mask></defs><rect id="fill" mask="url(#textMask)" fill="url(#gradient)" x="0" y="0" width="4000" height="200"></rect></svg></div>
+		<div class = "faer specialtext">
+   <svg style="position:relative" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 750 200" preserveAspectRatio="xMidYMid meet" style="height:70%;width:70%">
+      <defs>
+         <filter id="texteffect">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="4"></feGaussianBlur>
+            <feComponentTransfer>
+               <feFuncA type="linear" slope="1.5" intercept="0"></feFuncA>
+            </feComponentTransfer>
+            <feComposite result="outer" in2="SourceGraphic" operator="out"></feComposite>
+            <feGaussianBlur result="pre-inner" in="SourceGraphic" stdDeviation="2"></feGaussianBlur>
+            <feComposite in="SourceGraphic" in2="pre-inner" operator="out"></feComposite>
+            <feComponentTransfer result="inner">
+               <feFuncA type="linear" slope="7.5" intercept="0"></feFuncA>
+            </feComponentTransfer>
+            <feMerge>
+               <feMergeNode in="outer"></feMergeNode>
+               <feMergeNode in="inner"></feMergeNode>
+            </feMerge>
+            <feGaussianBlur stdDeviation="1"></feGaussianBlur>
+         </filter>
+         <linearGradient id="gradient" color-interpolation="sRGB" spreadMethod="repeat" x1="0" x2="0.5" y1="0.02" y2="0">
+            <stop stop-color="#ef50d5" offset="0%"></stop>
+            <stop stop-color="#15f0f2" offset="33%"></stop>
+            <stop stop-color="#f2a415" offset="66%"></stop>
+            <stop stop-color="#ef50d5" offset="100%"></stop>
+         </linearGradient>
+         <mask id="textMask">
+            <g filter="url(#texteffect)">
+               <rect id="top-rect" x="10" y="50" width="730" height="10" fill="#fff"></rect>
+               <rect id="bottom-rect" x="730" y="170" width="730" height="10" fill="#fff"></rect>
+               <text id="text" x="375" y="150" text-anchor="middle" fill="#fff">Effervescence</text>
+            </g>
+         </mask>
+      </defs>
+      <rect id="fill" mask="url(#textMask)" fill="url(#gradient)" x="0" y="0" width="4000" height="200"></rect>
+   </svg>
+</div>
   <script src='js/jquery.js'></script>
 <script src='js/lettering.js'></script>
 
@@ -94,14 +130,19 @@ jQuery(function($) {
     setSkrollr($('.os-phrases h2:nth-child(1) > span > span > span'), [[0, 'text-shadow: 0 0 50px#fff;letter-spacing: 80px;opacity: 0;-webkit-transform: rotateY(-90deg);'], 
     	[1200, 'text-shadow: 0 0 1px #fff;letter-spacing: 14px;opacity: 0.8;-webkit-transform: rotateY(0deg);'],[1400, 'text-shadow: 0 0 1px #fff;opacity: 0.8;transform: rotateY(0deg)translateZ(100px);'],
     	[2000, 'text-shadow: 0 0 10px #fff;opacity: 0; -webkit-transform: translateZ(130px);pointer-events: none']]);
-    setSkrollr($('.os-phrases h2:nth-child(2) > span > span > span'), [[1600, 'text-shadow: 0 0 50px#fff;letter-spacing: 80px;opacity: 0;-webkit-transform: rotateY(-90deg);'], 
-    	[2800, 'text-shadow: 0 0 1px #fff;letter-spacing: 14px;opacity: 0.8;-webkit-transform: rotateY(0deg);'],[3000, 'text-shadow: 0 0 1px #fff;opacity: 0.8;transform: rotateY(0deg)translateZ(100px);'],
-    	[3500, 'text-shadow: 0 0 10px #fff;opacity: 0; -webkit-transform: translateZ(130px);pointer-events: none']]);
-    setSkrollr($('.os-phrases h2:nth-child(3) > span > span > span'), [[3300, 'text-shadow: 0 0 50px#fff;letter-spacing: 80px;opacity: 0;-webkit-transform: rotateY(-90deg);'], 
-    	[4800, 'text-shadow: 0 0 1px #fff;letter-spacing: 14px;opacity: 0.8;-webkit-transform: rotateY(0deg);'],[5000, 'text-shadow: 0 0 1px #fff;opacity: 0.8;transform: rotateY(0deg)translateZ(100px);'],
-    	[6800, 'text-shadow: 0 0 10px #fff;opacity: 0; -webkit-transform: translateZ(130px);pointer-events: none']]);
+    setSkrollr($('.os-phrases h2:nth-child(2) > span > span > span'), [[1400, 'text-shadow: 0 0 50px#fff;letter-spacing: 80px;opacity: 0;-webkit-transform: rotateY(-90deg);'], 
+    	[1800, 'text-shadow: 0 0 1px #fff;letter-spacing: 14px;opacity: 0.8;-webkit-transform: rotateY(0deg);'],[2600, 'text-shadow: 0 0 1px #fff;opacity: 0.8;transform: rotateY(0deg)translateZ(100px);'],
+    	[3000, 'text-shadow: 0 0 10px #fff;opacity: 0; -webkit-transform: translateZ(130px);pointer-events: none']]);
+    setSkrollr($('.os-phrases h2:nth-child(3) > span > span > span'), [[2400, 'text-shadow: 0 0 50px#fff;letter-spacing: 80px;opacity: 0;-webkit-transform: rotateY(-90deg);'], 
+    	[3000, 'text-shadow: 0 0 1px #fff;letter-spacing: 14px;opacity: 0.8;-webkit-transform: rotateY(0deg);'],[4000, 'text-shadow: 0 0 1px #fff;opacity: 0.8;transform: rotateY(0deg)translateZ(100px);'],
+    	[4400, 'text-shadow: 0 0 10px #fff;opacity: 0; -webkit-transform: translateZ(130px);pointer-events: none']]);
+    setSkrollr($('.os-phrases h2:nth-child(4) > span > span > span'), [[4000, 'text-shadow: 0 0 50px#fff;letter-spacing: 80px;opacity: 0;-webkit-transform: rotateY(-90deg);'], 
+    	[4400, 'text-shadow: 0 0 1px #fff;letter-spacing: 14px;opacity: 0.8;-webkit-transform: rotateY(0deg);'],[5000, 'text-shadow: 0 0 1px #fff;opacity: 0.8;transform: rotateY(0deg)translateZ(100px);'],
+    	[6000, 'text-shadow: 0 0 10px #fff;opacity: 0; -webkit-transform: translateZ(130px);pointer-events: none']]);
+    setSkrollr($('#top-rect'), [[0, 'width:0'], [6000, 'width:0;'],[6700, 'opacity:1;width:730px;']]);
+    setSkrollr($('#bottom-rect'), [[0, 'width:0;x:0;'], [6000, 'width:0;x:730;'],[6700, 'width:730px;bottom:0;x:10;']]);
 
-    setSkrollr($('.faer'), [[0, 'opacity:0'], [6000, 'opacity:0'],[6700, 'opacity:1']]);
+    setSkrollr($('.faer'), [[0, 'opacity:0'], [6000, 'opacity:0;'],[6700, 'opacity:1;width:60%;']]);
     
     skrollr.init({
         smoothScrolling: false
