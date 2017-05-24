@@ -60,7 +60,9 @@
 </head>
 
 <body>
-<div class="effe"></div>
+<div id="effe-L" class="cntered"></div>
+<!-- <div id="effe-T"></div> -->
+
   		<div class="container" id="fix">	
 			<div class="os-phrases" id="os-phrases">
 				<h2>Let's go for a scroll?</h2>
@@ -74,7 +76,7 @@
 				<!-- <h2>For the best 3 days of your life</h2> -->
 			</div>
 		</div><!-- /container -->
-		<div class = "faer specialtext">
+		<!-- <div class = "faer specialtext">
    <svg style="position:relative" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 750 200" preserveAspectRatio="xMidYMid meet" style="height:70%;width:70%">
       <defs>
          <filter id="texteffect">
@@ -124,7 +126,7 @@
       </defs>
       <rect id="fill" mask="url(#textMask)" fill="url(#gradient)" x="0" y="0" width="4000" height="200"></rect>
    </svg>
-</div>
+</div> -->
   <script src='js/jquery.js'></script>
 <script src='js/lettering.js'></script>
 
@@ -159,11 +161,16 @@ jQuery(function($) {
     setSkrollr($('.os-phrases h2:nth-child(5) > span > span > span'), [[4000, 'text-shadow: 0 0 50px#fff;letter-spacing: 80px;opacity: 0;-webkit-transform: rotateY(-90deg);'], 
     	[4400, 'text-shadow: 0 0 1px #fff;letter-spacing: 14px;opacity: 0.8;-webkit-transform: rotateY(0deg);'],[5000, 'text-shadow: 0 0 1px #fff;opacity: 0.8;transform: rotateY(0deg)translateZ(100px);'],
     	[6000, 'text-shadow: 0 0 10px #fff;opacity: 0; -webkit-transform: translateZ(130px);pointer-events: none']]);
-    
+    setSkrollr($('#effe-L'), [[0, 'width:0%;'], [1500, 'width:0%;'],[6000, 'width:50%;'],[6700, 'width:100%;']]);
+    setSkrollr($('#effe-T'), [[0, 'height:0%;'], [1500, 'height:50%;'],[6700, 'height:100%;']]);
+
+
+ 
     setSkrollr($('#top-rect'), [[0, 'width:0'], [6000, 'width:0;'],[6700, 'opacity:1;width:730px;']]);
+    
     setSkrollr($('#bottom-rect'), [[0, 'width:0;x:0;'], [6000, 'width:0;x:730;'],[6700, 'width:730px;bottom:0;x:10;']]);
 
-    setSkrollr($('.faer'), [[0, 'opacity:0'], [6000, 'opacity:0;'],[6700, 'opacity:1;width:60%;']]);
+    // setSkrollr($('.faer'), [[0, 'opacity:0'], [6000, 'opacity:0;'],[6700, 'opacity:1;width:60%;']]);
 	setSkrollr($('.t1'), [[0, 'x:0;y:150;'], [6000, 'x:0;y:150;'],[6700, 'x:50;y:150;']]);
     setSkrollr($('.t2'), [[0, 'x:0;y:150;'], [6000, 'x:200;y:150;'],[6700, 'x:100;y:150;']]);
     setSkrollr($('.t3'), [[0, 'x:0;y:150;'], [6000, 'x:230;y:150;'],[6700, 'x:150;y:150;']]);
