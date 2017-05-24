@@ -45,21 +45,21 @@ $('#lightsToggle').click(function () {
 	lightsOn();
 });
 
-$(window).on('scroll', function() {
-    var y_scroll_pos = window.pageYOffset;
-    var scroll_pos_test = 6700;             // set to whatever you want it to be
+// $(window).on('scroll', function() {
+//     var y_scroll_pos = window.pageYOffset;
+//     var scroll_pos_test = 6700;             // set to whatever you want it to be
 
-    if(y_scroll_pos > scroll_pos_test) {
-    	window.scrollTo(0, 0);
-    	$('#os-phrases').hide();
-    	$('body').css({"overflow":"hidden;",
-    		"height":"100vh"
-    });
-    	$('html').removeClass("skrollr");
-    	$('html').removeClass("skrollr-desktop");
+//     if(y_scroll_pos > scroll_pos_test) {
+//     	window.scrollTo(0, 0);
+//     	$('#os-phrases').hide();
+//     	$('body').css({"overflow":"hidden;",
+//     		"height":"100vh"
+//     });
+//     	$('html').removeClass("skrollr");
+//     	$('html').removeClass("skrollr-desktop");
 
-    	 $('body').removeAttr("style");
-    	revealLogo();
-        //do stuff
-    }
-});
+//     	 $('body').removeAttr("style");
+//     	revealLogo();
+//         //do stuff
+//     }
+// });
