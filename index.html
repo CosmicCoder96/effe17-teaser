@@ -18,7 +18,7 @@
 </head>
 
 <body>
-  		<div class="container">	
+  		<div class="container" id="fix">	
 			<div class="os-phrases" id="os-phrases">
 				<h2>16 Years ago</h2>
 				<h2>random text</h2>
@@ -30,15 +30,39 @@
 				<h2>For the best 3 days of your life</h2>
 			</div>
 		</div><!-- /container -->
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src='http://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.6.1/jquery.lettering.min.js'></script>
+  <script src='js/jquery.js'></script>
+<script src='js/lettering.js'></script>
 
     <script src="js/index.js"></script>
     <script src="js/seq1/r1.js"></script>
     <script src="js/seq1/r2.js"></script>
     <script src="js/seq1/index.js"></script>
+    <script src="https://prinzhorn.github.io/skrollr/dist/skrollr.min.js"></script>
 
+<script>
+var setSkrollr = function($el, data) {
+    for (var i = 0, l = data.length; i < l; i++) {
+        var d = data[i],
+            px = d[0];
+            css = d[1];
+        $el.attr('data-' + px, css);
+    }
+}
+jQuery(function($) {
+    setSkrollr($('.os-phrases h2:nth-child(1) > span > span > span'), [[0, 'text-shadow: 0 0 50px#fff;letter-spacing: 80px;opacity: 0;-webkit-transform: rotateY(-90deg);'], 
+    	[750, 'text-shadow: 0 0 1px #fff;letter-spacing: 14px;opacity: 0.8;-webkit-transform: rotateY(0deg);'],[1000, 'text-shadow: 0 0 1px #fff;opacity: 0.8;transform: rotateY(0deg)translateZ(100px);'],
+    	[1500, 'text-shadow: 0 0 10px #fff;opacity: 0; -webkit-transform: translateZ(130px);pointer-events: none']]);
+    setSkrollr($('.os-phrases h2:nth-child(2) > span > span > span'), [[1000, 'text-shadow: 0 0 50px#fff;letter-spacing: 80px;opacity: 0;-webkit-transform: rotateY(-90deg);'], 
+    	[1200, 'text-shadow: 0 0 1px #fff;letter-spacing: 14px;opacity: 0.8;-webkit-transform: rotateY(0deg);'],[1500, 'text-shadow: 0 0 1px #fff;opacity: 0.8;transform: rotateY(0deg)translateZ(100px);'],
+    	[1700, 'text-shadow: 0 0 10px #fff;opacity: 0; -webkit-transform: translateZ(130px);pointer-events: none']]);
 
+    setSkrollr($('#box2'), [[0, '-webkit-transform:translateX(-100%)'], [750, 'transform:translateX(100%)'], [1500, 'transform:translateX(-100%)']]);
+    
+    skrollr.init({
+        smoothScrolling: false
+    });
+});
+</script>
 
 </body>
 </html>
