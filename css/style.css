@@ -149,7 +149,7 @@ left:-100vw;
   height: 50%;
   /*background-color: rgb(26, 148, 198);*/
   background:url(../BennyM.jpg);
-  background-size: contain;
+  background-size: cover;
 }
 #benny2 {
   position: fixed;
@@ -468,8 +468,10 @@ a:hover {
 top:-20%;
 font-weight: 800;
 }
-.os-phrases h2:nth-child(6) {
+.os-phrases h2:nth-child(7) {
 position: absolute;
+font-size:20px;
+font-weight:800;
 bottom: 0;
 left:0;
 }
