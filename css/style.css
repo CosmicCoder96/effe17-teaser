@@ -65,6 +65,26 @@ left:-100vw;
   bottom:20%;
   left:75%;
 }
+#tree-3 {
+  position:fixed;
+  background:url(../tree-3.png);
+  width:15vh;
+  height: 15vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  bottom:24%;
+  left:45%;
+}
+#tree-4 {
+  position:fixed;
+  background:url(../tree-4.png);
+  width:20vh;
+  height: 20vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  bottom:26%;
+  left:55%;
+}
 #effe-L {
   position: fixed;
   z-index: 0;
@@ -379,6 +399,7 @@ a:hover {
 }
 .os-phrases h2:nth-child(6) {
 top:-20%;
+font-weight: 800;
 }
 .os-phrases h2:nth-child(6) {
 position: absolute;

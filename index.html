@@ -61,9 +61,13 @@
 
 <body>
 <div id="effe-L" class="cntered"></div>
+<div id="clouds"></div>
 <div id="trees">
 <div id="tree-1"></div>
 <div id="tree-2"></div>
+<div id="tree-3"></div>
+<div id="tree-4"></div>
+<div id="sponsor"></div>
 </div>
 
 <!-- <div id="effe-T"></div> -->
@@ -904,18 +908,12 @@ jQuery(function($) {
     setSkrollr($('#train'), [[0, 'left:-100%;opacity:0;'], [1500, 'left:-100%;opacity:0;'],[6000, 'left:-100%;opacity:0;'],[6700, 'left:10%;opacity:1;']]);
     setSkrollr($('#effe-L'), [[0, 'left:50%;width:0%;-webkit-transform:translateX(0%);transform:translateX(0%);'], [4500, 'width:0%;-webkit-transform:translateX(0%);transform:translateX(0%);'],[6500, 'width:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%);'],[6700, 'width:100%;-webkit-transform:translateX(-50%);transform:translateX(-50%);']]);
     setSkrollr($('#effe-T'), [[0, 'height:0%;'], [1500, 'height:50%;'],[6700, 'height:100%;']]);
-    setSkrollr($('#tree-1'), [[0, 'opacity:0;'], [1500, 'opacity:0;'],[6700, 'opacity:1;']]);
+    setSkrollr($('#tree-1'), [[0, 'opacity:0;'], [6500, 'opacity:0;'],[6700, 'opacity:1;']]);
+    setSkrollr($('#tree-2'), [[0, 'opacity:0;'], [6500, 'opacity:0;'],[6700, 'opacity:1;']]);
+    setSkrollr($('#tree-3'), [[0, 'opacity:0;'], [6500, 'opacity:0;'],[6700, 'opacity:1;']]);
+    setSkrollr($('#tree-4'), [[0, 'opacity:0;'], [6500, 'opacity:0;'],[6700, 'opacity:1;']]);
+
     setSkrollr($('#trees'), [[0, ''], [6600, 'animation:dont 1s linear'],[6700, 'animation:travel 10s linear infinite;']]);
-
-
-
-
-
- 
-    
-
-
-    
     skrollr.init({
         smoothScrolling: false
     });
