@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Effervescence 17 | Mobile</title>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/skrollr.js"></script>
+	<style>
+		@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:700);
+html,body,#content{height:100vh;overflow:hidden;}
+#content {
+  background:url('background.jpg')no-repeat 0 0;
+  background-attachment:fixed;
+  background-size:cover;
+  position:relative;
+}
+#content:after {
+  content:'';
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  background:#61b2d8;
+  background:-moz-linear-gradient(-45deg, #61b2d8 0%, #f9a4f2 100%);
+  background:-webkit-linear-gradient(-45deg, #61b2d8 0%, #f9a4f2 100%);
+  background:linear-gradient(135deg, #61b2d8 0%, #f9a4f2 100%);
+  filter:progid: DXImageTransform.Microsoft.gradient( startColorstr='#61b2d8', endColorstr='#f9a4f2', GradientType=1);
+  opacity:.5;
+  z-index:100;
+}
+#content h1{
+  text-transform:uppercase;
+  color:#fff;
+  font-weight:bold;
+  font-size:5em;
+  line-height:120px;
+  top:32%;
+  left:50%;
+  -webkit-transform:translate(-50%, -50%);
+  -moz-transform:translate(-50%, -50%);
+  -o-transform:translate(-50%, -50%);
+  transform:translate(-50%, -50%);
+  position:absolute;
+  z-index:101;
+  opacity: 0.7;
+  width:100%;
+  text-align:center;
+  font-family:'Josefin Sans', sans-serif;
+  mix-blend-mode:overlay;
+  width:80%;
+}
+#content h2{
+  text-transform:uppercase;
+  color:#fff;
+  font-weight:bold;
+  font-size:2em;
+  line-height:120px;
+  top:52%;
+  left:50%;
+  -webkit-transform:translate(-50%, -50%);
+  -moz-transform:translate(-50%, -50%);
+  -o-transform:translate(-50%, -50%);
+  transform:translate(-50%, -50%);
+  position:absolute;
+  z-index:99;
+  width:100%;
+  text-align:center;
+  font-family:'Josefin Sans', sans-serif;
+  mix-blend-mode:overlay;
+  width:80%;
+}
+#content .CA, #content .sponsor {
+	top:70vh;
+	left:50%;
+	z-index: 101;
+
+}
+#content .sponsor {
+	top:60vh;
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  #content .CA, #content .sponsor {
+	top:70vh;
+	left:50%;
+	z-index: 101;
+
+}
+#content .sponsor {
+	top:0vh;
+}
+}
+/*Mountains*/
+.layer.mountain{
+  width:100%;
+  height:100%;
+  background-size:cover!important;
+  position:absolute;
+  left:0;
+  top:0;
+}
+.layer.mountain.one{background:url('layer1.png')no-repeat left bottom;z-index:10;}
+.layer.mountain.two{background:url('layer3.png')no-repeat 0 0;z-index:8;}
+.layer.mountain.three{background:url('layer4.png')no-repeat 0 0;z-index:6;}
+/*Cloud*/
+.layer.cloud img{
+  position:absolute;
+  opacity:0.6;
+  right:0;
+  animation-name:cloud;
+  animation-iteration-count:infinite;
+  will-change:left;
+}
+.layer.cloud.one img{
+  bottom:0;
+  z-index:9;
+  animation-duration:120s;
+  animation-timing-function:ease-out;
+}
+.layer.cloud.two img{
+  bottom:120px;
+  z-index:7;
+  animation-duration:60s;
+  animation-timing-function:ease-in;
+}
+.layer.cloud.three img{
+  z-index:5;
+  bottom:300px;
+  animation-duration:120s;
+  animation-timing-function:ease-out;
+}
+@keyframes cloud {from{right:0;}to{right:2000px;}}
+	</style>
+</head>
+<body>
+<div id="content">
+  <h1>Effervescence 17</h1>
+  <h2> We are on our way </h2>
+  <h2 class="CA"> Campus Ambassador</h2>
+  <h2 class="sponsor">Sponsor</h2>
+  <div class="layer mountain one"></div>
+  <div class="layer cloud one"><img src="cloud1.png" alt=""></div>
+  <div class="layer mountain two"></div>
+  <div class="layer mountain three"></div>
+  <div class="layer cloud two"><img src="cloud1.png" alt=""></div>
+  <div class="layer cloud three"><img src="cloud1.png" alt=""></div>
+</div>
+</body>
+<script>
+var s = skrollr.init();
+      if (s.isMobile()) {
+          if($(document).width()<768){
+          $('#content h2').css({"font-size":"3em"});
+          console.log("It works");
+      }
+          console.log($(window).width());
+
+      }
+</script>
+</html>
