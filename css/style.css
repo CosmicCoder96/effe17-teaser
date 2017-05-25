@@ -32,8 +32,38 @@ left:-100vw;
         -webkit-transform: rotate(359deg);
     }
 }
-#canvas-holder {
+@keyframes travel {
+  from {
+    transform: translateX(100vw);
+  }
+  to {
+    transform: translateX(-100vw);
+  }
+}
+#trees {
+  position: fixed;
+  width:100vw;
+  height:100vh;
+}
+#tree-1 {
   position:fixed;
+  background:url(../tree-2.png);
+  width:20vh;
+  height: 20vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  bottom:20%;
+  left:15%;
+}
+#tree-2 {
+  position:fixed;
+  background:url(../tree-2.png);
+  width:20vh;
+  height: 20vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  bottom:20%;
+  left:75%;
 }
 #effe-L {
   position: fixed;

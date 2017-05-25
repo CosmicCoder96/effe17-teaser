@@ -61,7 +61,11 @@
 
 <body>
 <div id="effe-L" class="cntered"></div>
-<div id="canvas-holder"></div>
+<div id="trees">
+<div id="tree-1"></div>
+<div id="tree-2"></div>
+</div>
+
 <!-- <div id="effe-T"></div> -->
 <!-- <div id="effe-B1"></div> -->
 
@@ -101,21 +105,21 @@
         {
             svgDocument = evt.target.ownerDocument;
         }
-        addRotateTransform('path4456', 5, -1);
-        addRotateTransform('path216', 5, -1);
-        addRotateTransform('path216', 5, -1);
-        addRotateTransform('path222', 5, -1);
-        addRotateTransform('path260', 5, -1);
+        addRotateTransform('path4456', 2, -1);
+        addRotateTransform('path216', 2, -1);
+        addRotateTransform('path216', 2, -1);
+        addRotateTransform('path222', 2, -1);
+        addRotateTransform('path260', 2, -1);
 
-        addRotateTransform('path210', 5, -1);
-        addRotateTransform('path234', 5, -1);
-        addRotateTransform('path252', 5, -1);
-        addRotateTransform('path4751', 5, -1);
-        addRotateTransform('path4793', 5, -1);
-        addRotateTransform('path4809', 5, -1);
-        addRotateTransform('path4577', 5, -1);
-        addRotateTransform('path4541', 5, -1);
-        addRotateTransform('path4533', 5, -1);
+        addRotateTransform('path210', 2, -1);
+        addRotateTransform('path234', 2, -1);
+        addRotateTransform('path252', 2, -1);
+        addRotateTransform('path4751', 2, -1);
+        addRotateTransform('path4793', 2, -1);
+        addRotateTransform('path4809', 2, -1);
+        addRotateTransform('path4577', 2, -1);
+        addRotateTransform('path4541', 2, -1);
+        addRotateTransform('path4533', 2, -1);
 
 
 
@@ -900,7 +904,9 @@ jQuery(function($) {
     setSkrollr($('#train'), [[0, 'left:-100%;opacity:0;'], [1500, 'left:-100%;opacity:0;'],[6000, 'left:-100%;opacity:0;'],[6700, 'left:10%;opacity:1;']]);
     setSkrollr($('#effe-L'), [[0, 'left:50%;width:0%;-webkit-transform:translateX(0%);transform:translateX(0%);'], [4500, 'width:0%;-webkit-transform:translateX(0%);transform:translateX(0%);'],[6500, 'width:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%);'],[6700, 'width:100%;-webkit-transform:translateX(-50%);transform:translateX(-50%);']]);
     setSkrollr($('#effe-T'), [[0, 'height:0%;'], [1500, 'height:50%;'],[6700, 'height:100%;']]);
-    setSkrollr($('#canvas-holder'), [[0, 'opacity:0;'], [1500, 'opacity:0;'],[6700, 'opacity:1;']]);
+    setSkrollr($('#tree-1'), [[0, 'opacity:0;'], [1500, 'opacity:0;'],[6700, 'opacity:1;']]);
+    setSkrollr($('#trees'), [[0, ''], [6600, 'animation:dont 1s linear'],[6700, 'animation:travel 10s linear infinite;']]);
+
 
 
 
