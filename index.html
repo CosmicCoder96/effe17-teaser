@@ -61,6 +61,7 @@
 
 <body>
 <div id="effe-L" class="cntered"></div>
+<div id="canvas-holder"></div>
 <!-- <div id="effe-T"></div> -->
 <!-- <div id="effe-B1"></div> -->
 
@@ -866,79 +867,7 @@
     <script src="js/seq1/r2.js"></script>
     <script src="js/seq1/index.js"></script>
     <script src="js/skrollr.js"></script>
-<script type="text/javascript">
-	var theta = 0,
-  step = 0,
-  f = 500,
-  num = 6;
-var layers = [];
 
-function setup() {
-  createCanvas(windowWidth, windowHeight - 4);
-  colorMode(HSB, 360, 100, 100);
-  step = (height - 200) / num;
-  createScenery();
-}
-
-function draw() {
-  background('#ffffff');
-  for (var i = 0; i < layers.length; i++) {
-    var br = map(i, 0, layers.length - 1, 20, 90);
-    fill(f, br, 100);
-    layers[i].display();
-  }
-  fill(0);
-  textAlign(RIGHT);
-  text("click mouse to change scenery", width - 10, 15);
-  text("type key to change color", width - 10, 30);
-  theta += 0.002;
-  println(frameRate());
-}
-
-function createScenery() {
-  for (var i = 0; i < num; i++) {
-    layers.push(new Layer(-20 + i * step, random(1000), i + 0.5));
-  }
-}
-
-function Layer(_start, _noize, _speed) {
-
-  var yOff = 0,
-    yOff2 = 0;
-  var start = _start;
-  var noize = _noize;
-  var speed = _speed;
-
-  this.display = function() {
-    yOff = yOff2;
-    noStroke();
-    beginShape();
-    vertex(0, height);
-    for (var x = 0; x < width; x += 3) {
-      var y = start + noise(noize + sin(yOff) * 3) * step * 3.5;
-      vertex(x, y);
-      yOff += TWO_PI / (width);
-    }
-    vertex(width, height);
-    endShape();
-    yOff2 = theta * speed;
-  }
-}
-
-function mouseReleased() {
-  layers = [];
-  background(255);
-  createScenery();
-}
-
-function keyReleased() {
-  f = random(250, 360);
-}
-
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight - 4);
-}
-</script>
 <script id='letter-script'>
 var setSkrollr = function($el, data) {
     for (var i = 0, l = data.length; i < l; i++) {
@@ -971,6 +900,8 @@ jQuery(function($) {
     setSkrollr($('#train'), [[0, 'left:-100%;opacity:0;'], [1500, 'left:-100%;opacity:0;'],[6000, 'left:-100%;opacity:0;'],[6700, 'left:10%;opacity:1;']]);
     setSkrollr($('#effe-L'), [[0, 'left:50%;width:0%;-webkit-transform:translateX(0%);transform:translateX(0%);'], [4500, 'width:0%;-webkit-transform:translateX(0%);transform:translateX(0%);'],[6500, 'width:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%);'],[6700, 'width:100%;-webkit-transform:translateX(-50%);transform:translateX(-50%);']]);
     setSkrollr($('#effe-T'), [[0, 'height:0%;'], [1500, 'height:50%;'],[6700, 'height:100%;']]);
+    setSkrollr($('#canvas-holder'), [[0, 'opacity:0;'], [1500, 'opacity:0;'],[6700, 'opacity:1;']]);
+
 
 
 

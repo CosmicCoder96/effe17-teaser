@@ -32,6 +32,9 @@ left:-100vw;
         -webkit-transform: rotate(359deg);
     }
 }
+#canvas-holder {
+  position:fixed;
+}
 #effe-L {
   position: fixed;
   z-index: 0;
