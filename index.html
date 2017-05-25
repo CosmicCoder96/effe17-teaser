@@ -939,13 +939,10 @@ jQuery(function($) {
 
 
     setSkrollr($('#trees'), [[0, ''], [6600, 'animation:dont 1s linear'],[6700, 'animation:travel 5s linear infinite;']]);
-    // skrollr.init({
-    //     smoothScrolling: false
-    // });
     var s = skrollr.init();
-if (s.isMobile()) {
-    s.destroy();
-}
+      if (s.isMobile()) {
+          window.location='mobile/index.html';
+      }
 });
 </script>
 
