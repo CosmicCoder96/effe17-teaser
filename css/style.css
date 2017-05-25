@@ -14,6 +14,9 @@ body, html {
 }
 .centered { top:0; bottom:0; left:0; right:0; margin:auto; }
 
+#sponsor { 
+
+ }
 #train {
 position:fixed;
 bottom:0;
@@ -24,17 +27,9 @@ left:-100vw;
 
 
 }
-@-webkit-keyframes rotation {
-    from {
-        -webkit-transform: rotate(0deg);
-    }
-    to {
-        -webkit-transform: rotate(359deg);
-    }
-}
 @keyframes travel {
   from {
-    transform: translateX(100vw);
+    transform: translateX(0vw);
   }
   to {
     transform: translateX(-100vw);
@@ -84,6 +79,56 @@ left:-100vw;
   background-repeat: no-repeat;
   bottom:26%;
   left:55%;
+}
+#tree-5 {
+  position:fixed;
+  background:url(../tree-5.png);
+  width:20vh;
+  height: 20vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  bottom:20%;
+  left:95%;
+}
+#tree-6 {
+  position:fixed;
+  background:url(../tree-2.png);
+  width:20vh;
+  height: 20vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  bottom:20%;
+  left:135%;
+}
+#tree-7 {
+  position:fixed;
+  background:url(../tree-3.png);
+  width:15vh;
+  height: 15vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  bottom:24%;
+  left:145%;
+}
+#tree-8 {
+  position:fixed;
+  background:url(../tree-4.png);
+  width:20vh;
+  height: 20vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  bottom:26%;
+  left:155%;
+}
+#tree-9 {
+  position:fixed;
+  background:url(../tree-5.png);
+  width:20vh;
+  height: 20vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  bottom:20%;
+  left:195%;
 }
 #effe-L {
   position: fixed;
