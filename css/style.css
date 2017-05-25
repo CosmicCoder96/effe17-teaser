@@ -14,13 +14,31 @@ body, html {
 }
 .centered { top:0; bottom:0; left:0; right:0; margin:auto; }
 
+#train {
+position:fixed;
+bottom:0;
+left:-100vw;
+}
+#path4458,#path4460 {
+      -webkit-animation: rotation 2s infinite linear;
+
+
+}
+@-webkit-keyframes rotation {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(359deg);
+    }
+}
 #effe-L {
   position: fixed;
   z-index: 0;
   top:0;
   left:0;
   width: 100%;
-  height: 100%;
+  height: 40vh;
   background-color: rgb(26, 148, 198);
 }
 #effe-T {
