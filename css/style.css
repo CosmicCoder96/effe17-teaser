@@ -67,7 +67,7 @@ left:-100vw;
   height: 15vh;
   background-size: contain;
   background-repeat: no-repeat;
-  bottom:24vh;
+  bottom:22vh;
   left:45%;
 }
 #tree-4 {
@@ -77,7 +77,7 @@ left:-100vw;
   height: 20vh;
   background-size: contain;
   background-repeat: no-repeat;
-  bottom:26vh;
+  bottom:22vh;
   left:55%;
 }
 #tree-5 {
@@ -117,7 +117,7 @@ left:-100vw;
   height: 20vh;
   background-size: contain;
   background-repeat: no-repeat;
-  bottom:26vh;
+  bottom:22vh;
   left:155%;
 }
 #tree-9 {
@@ -139,6 +139,28 @@ left:-100vw;
   height: 100vh;
   /*background-color: rgb(26, 148, 198);*/
   background-color: #43C6DB;
+}
+#benny {
+  position: fixed;
+  z-index: 0;
+  top:0;
+  left:0;
+  width: 40%;
+  height: 50%;
+  /*background-color: rgb(26, 148, 198);*/
+  background:url(../BennyM.jpg);
+  background-size: contain;
+}
+#benny2 {
+  position: fixed;
+  z-index: 0;
+  bottom:0;
+  right:0;
+  width: 40%;
+  height: 50%;
+  /*background-color: rgb(26, 148, 198);*/
+  background:url(../benny-2.jpg);
+  background-size: cover;
 }
 #effe-T {
   position: fixed;
