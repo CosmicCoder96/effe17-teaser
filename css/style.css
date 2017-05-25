@@ -47,7 +47,7 @@ left:-100vw;
   height: 20vh;
   background-size: contain;
   background-repeat: no-repeat;
-  bottom:20%;
+  bottom:20vh;
   left:15%;
 }
 #tree-2 {
@@ -57,7 +57,7 @@ left:-100vw;
   height: 20vh;
   background-size: contain;
   background-repeat: no-repeat;
-  bottom:20%;
+  bottom:20vh;
   left:75%;
 }
 #tree-3 {
@@ -67,7 +67,7 @@ left:-100vw;
   height: 15vh;
   background-size: contain;
   background-repeat: no-repeat;
-  bottom:24%;
+  bottom:24vh;
   left:45%;
 }
 #tree-4 {
@@ -77,7 +77,7 @@ left:-100vw;
   height: 20vh;
   background-size: contain;
   background-repeat: no-repeat;
-  bottom:26%;
+  bottom:26vh;
   left:55%;
 }
 #tree-5 {
@@ -87,7 +87,7 @@ left:-100vw;
   height: 20vh;
   background-size: contain;
   background-repeat: no-repeat;
-  bottom:20%;
+  bottom:20vh;
   left:95%;
 }
 #tree-6 {
@@ -97,7 +97,7 @@ left:-100vw;
   height: 20vh;
   background-size: contain;
   background-repeat: no-repeat;
-  bottom:20%;
+  bottom:20vh;
   left:135%;
 }
 #tree-7 {
@@ -107,7 +107,7 @@ left:-100vw;
   height: 15vh;
   background-size: contain;
   background-repeat: no-repeat;
-  bottom:24%;
+  bottom:24vh;
   left:145%;
 }
 #tree-8 {
@@ -117,7 +117,7 @@ left:-100vw;
   height: 20vh;
   background-size: contain;
   background-repeat: no-repeat;
-  bottom:26%;
+  bottom:26vh;
   left:155%;
 }
 #tree-9 {
@@ -127,7 +127,7 @@ left:-100vw;
   height: 20vh;
   background-size: contain;
   background-repeat: no-repeat;
-  bottom:20%;
+  bottom:20vh;
   left:195%;
 }
 #effe-L {
