@@ -24,6 +24,7 @@ position:fixed;
 #train {
 position:fixed;
 bottom:0;
+z-index: -1;
 left:-100vw;
 }
 #path4458,#path4460 {
@@ -589,7 +590,7 @@ right:0;}
   position:fixed;
   z-index: 9999;
 }
-.modal-content {
+.modal-content-bl {
   color:black;
   /*font-family:Megrim, cursive;*/
   /*text-transform: none;*/
