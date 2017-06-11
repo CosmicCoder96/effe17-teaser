@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html >
 <head>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link href="http://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
 <script src="http://use.fontawesome.com/6c299f74e9.js"></script>
 
 <style>
@@ -105,7 +106,11 @@
  <div id="animatedModal">
             <!--"THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID-->
             <div  id="btn-close-modal" class="close-animatedModal"> 
-                                <img class="closebt" src="closebt.svg">
+                                <div class="outer">
+  <div class="inner">
+    <label>Back</label>
+  </div>
+</div>
             </div>
             
             <div class="modal-content-bl">
@@ -126,7 +131,7 @@
                       <li> Deliverables as per requirement? Yes!
                       <li> Budget-friendly deals? Of course!
                       <li> Regular updates about the events and festival? Definitely!
-                      <li> Fluffy unicorns? Nope.(We’re extremely sorry for that.)
+                      <li> Fluffy unicorns?&#x1f984 Nope &#x1F601(We’re extremely sorry for that.)
                     </ol>
                     <br>
                     <p>So what are you waiting for? Scroll down to see what makes associating with us a worthwhile option!</p>
@@ -135,26 +140,25 @@
                 </div>
                 <div class="row">
                 <div class="col-lg-1">
-                  <i class="fa extra fa-phone fa-4x" aria-hidden="true"></i>
+                  <i class="fa extra fa-phone fa-4x" style="color:#33cc33;opacity:0.8" aria-hidden="true"></i>
                 </div>
-                  <div class="col-lg-3 no-gutters">
+                  <div class="col-lg-4 no-gutters">
                       Aditya Dewan <br>Mudit Rathore <br>Anurag Bharadwaj
                   </div>
                   <div class="col-lg-1">
-                    <i class="fa fa-download fa-4x" aria-hidden="true"></i>
+                    <i class="fa fa-download fa-4x" aria-hidden="true" style="color:grey"></i>
                   </div>
                   <div class="col-lg-3 no-gutters">
                   Download <br>  Brochure
                   </div>
                   <div class="col-lg-1  no-gutters">
-                  <i class="fa fa-gg fa-3x" aria-hidden="true"></i>
+                  <i class="fa fa-gg fa-3x" style="color:#e60000" aria-hidden="true"></i>
                   </div>
                   <div class="col-lg-2 no-gutters">
                   Previous <br>sponsors
                   </div>
                 </div>
               </div>
-              <h3 style="text-align:center">Sponsor us </h3>
               
                 <div class="contacts">
                 </div>
@@ -1019,10 +1023,14 @@ jQuery(function($) {
 });
 $("#demo01").animatedModal( {
   animatedIn:'lightSpeedIn',
-  color :'white'
+  animatedOut: 'zoomOutLeft', 
+  color :'#000000'
 }
   );
 
+// background: #B2FEFA;  /* fallback for old browsers */
+// background: -webkit-linear-gradient(to right, #0ED2F7, #B2FEFA);   Chrome 10-25, Safari 5.1-6 
+// background: linear-gradient(to right, #0ED2F7, #B2FEFA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 </script>
 
