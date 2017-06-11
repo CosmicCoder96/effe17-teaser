@@ -3,10 +3,7 @@
 <head>
 	<title>Effervescence 17 | Mobile</title>
     <script src="../js/jquery.js"></script>
-    <script src="../js/skrollr.js"></script>
- <script src="../js/velocity.js"></script>
 
-        <script src="../js/animatedModal.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link href="http://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
@@ -253,7 +250,10 @@ hr{
                 </div>
               </div>
 </body>
-      
+        <script src="../js/skrollr.js"></script>
+ <script src="../js/velocity.js"></script>
+
+        <script src="../js/animatedModal.js"></script>  
 <script>
 
 $("#demo01").animatedModal( {
@@ -290,12 +290,26 @@ var s = skrollr.init();
 
       }
 </script>
+
 <style>
 #btn-close-modal {
  position: relative;
   width:100%;
   text-align:center;
   margin-top:40px;
+}
+.closebt {
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  cursor:pointer;
+  left:48%;
+}
+
+.closebt:hover {
+  transform:rotate(90deg);
 }
 </style>
 </html>
