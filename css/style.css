@@ -584,3 +584,7 @@ right:0;}
   font-weight: normal;
   font-style: normal;
 }
+#modal-button{
+  position:fixed;
+  z-index: 9999;
+}
