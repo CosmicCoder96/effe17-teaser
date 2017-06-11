@@ -17,6 +17,9 @@ body, html {
 #sponsor { 
 
  }
+ #modal-data,#model-button {
+position:fixed;
+}
 #train {
 position:fixed;
 bottom:0;

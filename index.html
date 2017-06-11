@@ -55,11 +55,26 @@
   
 
       <link id = "mainCss" rel="stylesheet" href="css/style.css">
+      <link id = "mainCss" rel="stylesheet" href="css/animate.min.css">
+
 
   
 </head>
 
 <body>
+<div id="modal-button">
+  <a id="demo01" href="#animatedModal">DEMO01</a>
+</div>
+ <div id="modal-data">
+            <!--"THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID-->
+            <div  id="btn-close-modal" class="close-modal-data"> 
+                CLOSE MODAL
+            </div>
+            
+            <div class="modal-content">
+                <!--Your modal content goes here-->
+            </div>
+  </div>
 <div id="effe-L" class="cntered"></div>
 <div id="benny" ></div>
 <div id="benny2"></div>
@@ -875,6 +890,8 @@
     <script src="js/seq1/r2.js"></script>
     <script src="js/seq1/index.js"></script>
     <script src="js/skrollr.js"></script>
+        <script src="js/animatedModal.js"></script>
+
 
 <script id='letter-script'>
 var setSkrollr = function($el, data) {
@@ -902,7 +919,7 @@ jQuery(function($) {
     	[4400, 'text-shadow: 0 0 1px #fff;letter-spacing: 14px;opacity: 0.8;-webkit-transform: rotateY(0deg);'],[5000, 'text-shadow: 0 0 1px #fff;opacity: 0.8;transform: rotateY(0deg)translateZ(100px);'],
     	[6000, 'text-shadow: 0 0 10px #fff;letter-spacing:80px;opacity: 0; -webkit-transform: translateZ(130px);pointer-events: none']]);
     setSkrollr($('.os-phrases h2:nth-child(6) > span > span > span'), [[0, 'text-shadow: 0 0 1px#fff;letter-spacing: 14px;opacity: 0;-webkit-transform: rotateY(-90deg);'], [5000, 'text-shadow: 0 0 1px#fff;letter-spacing: 14px;opacity: 0;-webkit-transform: rotateY(-90deg);'], [6500, 'text-shadow: 0 0 50px#fff;letter-spacing: 80px;opacity: 0;-webkit-transform: rotateY(-90deg);'], 
-    	[6600, 'text-shadow: 0 0 1px #fff;letter-spacing: 40px;opacity: 0.8;-webkit-transform: rotateY(0deg);'],[7000, 'text-shadow: 0 0 1px #fff;opacity: 0.8;transform: rotateY(0deg)translateZ(100px);']]);
+    	[6600, 'text-shadow: 0 0 1px #fff;letter-spacing: 40px;opacity: 0.8;-webkit-transform: rotateY(0deg);'],[7000, 'text-shadow: 0 0 0px #fff;opacity: 1;transform: rotateY(0deg)translateZ(100px);']]);
     setSkrollr($('.os-phrases h2:nth-child(7) > span > span > span'), [[0, 'text-shadow: 0 0 1px#fff;letter-spacing: 14px;opacity: 0;-webkit-transform: rotateY(-90deg);'], [5000, 'text-shadow: 0 0 1px#fff;letter-spacing: 14px;opacity: 0;-webkit-transform: rotateY(-90deg);'], [6500, 'text-shadow: 0 0 50px#fff;letter-spacing: 80px;opacity: 0;-webkit-transform: rotateY(-90deg);'], 
     	[6600, 'text-shadow: 0 0 1px #fff;letter-spacing: 14px;opacity: 0.8;-webkit-transform: rotateY(0deg);'],[7000, 'text-shadow: 0 0 1px #fff;opacity: 0.8;transform: rotateY(0deg)translateZ(100px);']]);
     setSkrollr($('.os-phrases h2:nth-child(8) > span > span > span'), [[0, 'text-shadow: 0 0 1px#fff;letter-spacing: 14px;opacity: 0;-webkit-transform: rotateY(-90deg);'], [5000, 'text-shadow: 0 0 1px#fff;letter-spacing: 14px;opacity: 0;-webkit-transform: rotateY(-90deg);'], [6500, 'text-shadow: 0 0 50px#fff;letter-spacing: 80px;opacity: 0;-webkit-transform: rotateY(-90deg);'], 
@@ -926,6 +943,8 @@ jQuery(function($) {
     setSkrollr($('#tree-7'), [[0, 'opacity:0;'], [6500, 'opacity:0;'],[6700, 'opacity:1;']]);
     setSkrollr($('#tree-8'), [[0, 'opacity:0;'], [6500, 'opacity:0;'],[6700, 'opacity:1;']]);
     setSkrollr($('#tree-9'), [[0, 'opacity:0;'], [6500, 'opacity:0;'],[6700, 'opacity:1;']]);
+    setSkrollr($('#modal-data'), [[0, 'opacity:0;'], [6500, 'opacity:0;'],[6700, 'opacity:1;']]);
+
 
 
 
@@ -935,6 +954,26 @@ jQuery(function($) {
           window.location='mobile/index.html';
       }
 });
+$("#modal").animatedModal({
+                modalTarget:'modal-data',
+                animatedIn:'lightSpeedIn',
+                animatedOut:'bounceOutDown',
+                color:'#3498db',
+                // Callbacks
+                beforeOpen: function() {
+                    console.log("The animation was called");
+                },           
+                afterOpen: function() {
+                    console.log("The animation is completed");
+                }, 
+                beforeClose: function() {
+                    console.log("The animation was called");
+                }, 
+                afterClose: function() {
+                    console.log("The animation is completed");
+                }
+            });
+
 </script>
 
 </body>
