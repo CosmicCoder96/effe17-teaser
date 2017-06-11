@@ -459,7 +459,7 @@ a:hover {
 }
 /* Bold words */
 .os-phrases h2:first-child .word5,
-.os-phrases h2:nth-child(2) .word4,
+.os-phrases h2:nth-child(2) .word5,
 .os-phrases h2:nth-child(4) .word2,.os-phrases h2:nth-child(5) .word2 {
   font-weight: 600;
 }
