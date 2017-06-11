@@ -117,7 +117,7 @@
               <div id="sponsorship-content">
               <div class="container">
                 <div class="row">
-                  <div class="col">
+                  <div class="col thumb">
                     <hr id="two" data-symbol="">
                     <p>
                     Heading on to associate with us? At Effervescence we believe to serve the purpose, and to deliver more than the expectations. 
@@ -139,22 +139,22 @@
                   </div>
                 </div>
                 <div class="row">
-                <div class="col-lg-1">
+                <div class="col-lg-1 ">
                   <i class="fa extra fa-phone fa-4x" style="color:#33cc33;opacity:0.8" aria-hidden="true"></i>
                 </div>
-                  <div class="col-lg-4 no-gutters">
+                  <div class="col-lg-4 no-gutters thumb">
                       Aditya Dewan <br>Mudit Rathore <br>Anurag Bharadwaj
                   </div>
                   <div class="col-lg-1">
                     <i class="fa fa-download fa-4x" aria-hidden="true" style="color:grey"></i>
                   </div>
-                  <div class="col-lg-3 no-gutters">
+                  <div class="col-lg-3 no-gutters thumb">
                   Download <br>  Brochure
                   </div>
-                  <div class="col-lg-1  no-gutters">
+                  <div class="col-lg-1  no-gutters ">
                   <i class="fa fa-gg fa-3x" style="color:#e60000" aria-hidden="true"></i>
                   </div>
-                  <div class="col-lg-2 no-gutters">
+                  <div class="col-lg-2 no-gutters thumb">
                   Previous <br>sponsors
                   </div>
                 </div>
@@ -955,7 +955,10 @@
     <script src="js/seq1/r2.js"></script>
     <script src="js/seq1/index.js"></script>
     <script src="js/skrollr.js"></script>
+        <script src="js/velocity.js"></script>
+
         <script src="js/animatedModal.js"></script>
+
 
 
 <script id='letter-script'>
@@ -1024,7 +1027,7 @@ jQuery(function($) {
 $("#demo01").animatedModal( {
   animatedIn:'lightSpeedIn',
   animatedOut: 'zoomOutLeft', 
-  color :'#000000',
+  color :'#141926',
   beforeOpen: function() {
 
             var children = $(".thumb");
@@ -1032,7 +1035,7 @@ $("#demo01").animatedModal( {
 
             function addClassNextChild() {
                 if (index == children.length) return;
-                children.eq(index++).show().velocity("transition.expandIn", { opacity:1, stagger: 250 });
+                children.eq(index++).show().velocity("transition.slideRightIn", { opacity:1, stagger: 250 });
                 window.setTimeout(addClassNextChild, 200);
             }
 
