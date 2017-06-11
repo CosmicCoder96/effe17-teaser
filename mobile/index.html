@@ -4,9 +4,58 @@
 	<title>Effervescence 17 | Mobile</title>
     <script src="../js/jquery.js"></script>
     <script src="../js/skrollr.js"></script>
+ <script src="../js/velocity.js"></script>
+
+        <script src="../js/animatedModal.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link href="http://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+<script src="http://use.fontawesome.com/6c299f74e9.js"></script>
 	<style>
+
+
 		@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:700);
 html,body,#content{height:100vh;overflow:hidden;}
+  position: relative;
+  width:100%;
+  text-align:center;
+  margin-top:40px;
+}
+
+.closebt {
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  cursor:pointer;
+  left:48%;
+}
+
+.closebt:hover {
+  transform:rotate(90deg);
+}
+#sponsorship-content{
+  margin:0 auto;
+
+color:white;
+  padding:2em;
+  font-weight:300;
+  font-family: 'Acme', sans-serif;
+  line-height: 1.25;
+  font-size: 3.5vw;
+
+}
+.brochure:hover, .previous-sponsor:hover {
+  cursor:pointer;
+}
+
+hr{
+    border: 0;
+    color:blue;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+}
 #content {
   background:url('background.jpg')no-repeat 0 0;
   background-attachment:fixed;
@@ -128,6 +177,9 @@ html,body,#content{height:100vh;overflow:hidden;}
   animation-duration:30s;
   animation-timing-function:ease-out;
 }
+.thumb {
+  padding:2px;
+}
 @keyframes cloud {from{right:0;}to{right:2000px;}}
 	</style>
 </head>
@@ -136,7 +188,7 @@ html,body,#content{height:100vh;overflow:hidden;}
   <h1>Effervescence 17</h1>
   <h2> We are on our way </h2>
   <h2 class="CA"> Campus Ambassador</h2>
-  <h2 class="sponsor">Sponsor</h2>
+    <a id="demo01" href="#animatedModal"><h2 class="sponsor">Sponsor Us</h2></a>
   <div class="layer mountain one"></div>
   <div class="layer cloud one"><img src="cloud1.png" alt=""></div>
   <div class="layer mountain two"></div>
@@ -144,8 +196,90 @@ html,body,#content{height:100vh;overflow:hidden;}
   <div class="layer cloud two"><img src="cloud1.png" alt=""></div>
   <div class="layer cloud three"><img src="cloud1.png" alt=""></div>
 </div>
+<div id="animatedModal">
+            <!--"THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID-->
+            <div  id="btn-close-modal" class="close-animatedModal"> 
+                               <img class="closebt" src="../closebt.svg">
+            </div>
+             <div class="modal-content-bl">
+              <div id="sponsorship-content">
+              <div class="container">
+                <div class="row">
+                  <div class="col thumb">
+                    <hr id="two" data-symbol="">
+                    <p>
+                    Heading on to associate with us? At Effervescence we believe to serve the purpose, and to deliver more than the expectations. 
+                    </p>
+                    <br>
+                    <p>
+                    We make sure that we carry on the legacy of trust and promise put on us by our partners and sponsors. Let’s see a glimpse of what we provide: 
+                    </p>
+                    <br>
+                    <ol>
+                      <li> Deliverables as per requirement? Yes!
+                      <li> Budget-friendly deals? Of course!
+                      <li> Regular updates about the events and festival? Definitely!
+                      <li> Fluffy unicorns?&#x1f984 Nope &#x1F601(We’re extremely sorry for that.)
+                    </ol>
+                    <br>
+                    <p>So what are you waiting for? Scroll down to see what makes associating with us a worthwhile option!</p>
+                    <br>
+                  </div>
+                </div>
+                <div class="row justify-content-center">
+                <div class="col-sm-6 thumb">
+                  <i class="fa extra fa-phone fa-4x" style="color:#33cc33;opacity:0.8" aria-hidden="true"></i>
+                </div>
+                  <div class="col-sm-6 thumb">
+                      Aditya Dewan <br>Mudit Rathore <br>Anurag Bharadwaj
+                  </div>
+                  </div>
+                  <div class="row">
+                  <div class="col-sm-6 thumb">
+                    <span class="brochure"> <i class="fa fa-download fa-4x" aria-hidden="true" style="color:grey"></i></span>
+                  </div>
+                  <div class="col-sm-6 thumb no-gutters">
+                  <span class="brochure" >Download <br>  Brochure</span>
+                  </div>
+                  </div>
+                  <div class="row">
+                  <div class="col-sm-6 thumb ">
+                  <span class="previous-sponsor"> <i class="fa fa-gg fa-3x" style="color:#e60000" aria-hidden="true"></i></span>
+                  </div>
+                  <div class="col-sm-6 thumb">
+                  <span class="previous-sponsor"> Previous <br>sponsors</span>
+                  </div>
+                  </div>
+                </div>
+              </div>
 </body>
+      
 <script>
+
+$("#demo01").animatedModal( {
+  animatedIn:'lightSpeedIn',
+  animatedOut: 'zoomOutLeft', 
+  color :'#141926',
+  beforeOpen: function() {
+
+            var children = $(".thumb");
+            var index = 0;
+
+            function addClassNextChild() {
+                if (index == children.length) return;
+                children.eq(index++).show().velocity("transition.slideRightIn", { opacity:1, stagger: 250 });
+                window.setTimeout(addClassNextChild, 200);
+            }
+
+            addClassNextChild();
+
+        },
+        afterClose: function() {
+          $(".thumb").hide();
+              
+        }
+}
+  );
 var s = skrollr.init();
       if (s.isMobile()) {
           if($(document).width()<768){
@@ -156,4 +290,12 @@ var s = skrollr.init();
 
       }
 </script>
+<style>
+#btn-close-modal {
+ position: relative;
+  width:100%;
+  text-align:center;
+  margin-top:40px;
+}
+</style>
 </html>
