@@ -1,5 +1,6 @@
 /* General Demo Style */
 @import url(http://fonts.googleapis.com/css?family=Dosis:200,600);
+
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -587,4 +588,44 @@ right:0;}
 #modal-button{
   position:fixed;
   z-index: 9999;
+}
+.modal-content {
+  color:black;
+  /*font-family:Megrim, cursive;*/
+  /*text-transform: none;*/
+}
+#btn-close-modal img {
+  -webkit-filter:brightness(0);
+  filter:brightness(0);
+}
+#btn-close-modal{
+  position: relative;
+  width:100%;
+  text-align:center;
+  margin-top:40px;
+}
+.closebt {
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  cursor:pointer;
+}
+
+.closebt:hover {
+  transform:rotate(90deg);
+}
+#sponsorship-content{
+  margin:0 auto;
+  padding:2em;
+  font-weight:500;
+  line-height: 1.25;
+  font-size: 1.5em;
+}
+
+hr{
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }

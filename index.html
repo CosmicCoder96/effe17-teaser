@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html >
 <head>
+<script src="http://use.fontawesome.com/6c299f74e9.js"></script>
+
 <style>
 @import url('http://fonts.googleapis.com/css?family=Open+Sans');
 
@@ -97,18 +99,25 @@
  <div id="animatedModal">
             <!--"THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID-->
             <div  id="btn-close-modal" class="close-animatedModal"> 
-                CLOSE MODAL
+                                <img class="closebt" src="closebt.svg">
             </div>
             
             <div class="modal-content">
+              <div id="sponsorship-content">
+              <h3 style="text-align:center">Sponsor us </h3>
+              <hr id="two" data-symbol="">
                 Heading on to associate with us? At Effervescence we believe to serve the purpose, and to deliver more than the expectations. We make sure that we carry on the legacy of trust and promise put on us by our partners and sponsors. Let’s see a glimpse of what we provide: 
                 <ol>
-
-(1) Deliverables as per requirement? Yes!
-(2) Budget-friendly deals? Of course!
-(3) Regular updates about the events and festival? Definitely!
-(4) Fluffy unicorns? Nope.(We’re extremely sorry for that.)
-</ol>
+                  <li> Deliverables as per requirement? Yes!
+                  <li> Budget-friendly deals? Of course!
+                  <li> Regular updates about the events and festival? Definitely!
+                  <li> Fluffy unicorns? Nope.(We’re extremely sorry for that.)
+                </ol>
+                <p>So what are you waiting for? Scroll down to see what makes associating with us a worthwhile option!</p>
+                <p>
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                </p>
+            </div>
             </div>
   </div>
 		</div>
@@ -963,7 +972,8 @@ jQuery(function($) {
       }
 });
 $("#demo01").animatedModal( {
-  animatedIn:'lightSpeedIn'
+  animatedIn:'lightSpeedIn',
+  color :'#f0f0f0'
 }
   );
 
