@@ -586,9 +586,23 @@ right:0;}
   font-weight: normal;
   font-style: normal;
 }
-#modal-button{
+#modal-button, #CA{
   position:fixed;
+  left:30%;
+  bottom:40%;
   z-index: 9999;
+}
+#CA {
+  left:53%;
+}
+#modal-button a, #CA a{
+  text-decoration: none;
+  font-family: 'Dosis', Lato, Arial, sans-serif;
+  letter-spacing: 1px;
+
+  font-weight:600;
+  opacity: 0.8;
+  font-size:2em;
 }
 .modal-content-bl {
   color:black;
