@@ -198,7 +198,9 @@
           <a id="demo01" href="#animatedModal">
             <h2 class="sponsor">Sponsor Us</h2>
          </a>
-         <h2 class="CA"> Campus Ambassador</h2>
+         <a id="demo02" href="#animatedModal2">
+            <h2 class="CA"> Campus Ambassador</h2>
+         </a>
         
          <div class="layer mountain one"></div>
          <div class="layer cloud one"><img src="cloud1.png" alt=""></div>
@@ -207,6 +209,54 @@
          <div class="layer cloud two"><img src="cloud1.png" alt=""></div>
          <div class="layer cloud three"><img src="cloud1.png" alt=""></div>
       </div>
+        <div id="animatedModal2">
+            <!--"THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID-->
+            <div  id="btn-close-modal" class="close-animatedModal2"> 
+                                <div class="outer">
+            <div class="inner">
+              <label>Back</label>
+            </div>
+          </div>
+            </div>
+            
+            <div class="modal-content-bl">
+              <div id="sponsorship-content">
+              <div class="container">
+                <div class="row">
+                  <div class="col thumb">
+                    <hr id="two" data-symbol="">
+                    <p>
+                    So, what is a Campus Ambassador? 
+                    </p>
+                    <br>
+                   Campus Ambassadors are representatives of all the colleges participating in Effervescence. They play a pivotal role in providing maximum coverage for the fest, by spreading the word amongst their peers through various social media and providing a medium for communication between their institution and IIITA. 
+With time, each Campus Ambassador becomes an integral part of the Effervescence family, and are regularly in touch with the team operating in IIITA. Each CA is tasked with providing maximum publicity, both offline and online, of Effe in their respective institution and encourage active participation from students of all years.
+
+                    <br>
+                    <p>The perks of being the awesome Effervescence CA</p>
+                    <ol>
+                      <li> Certificate? Yes!
+                      <li>  Free Official Effe Merchandise.? Of course!
+                      <li>Gold passes and campus entry? Definitely!
+                      <li> Goodies and free passes? Apply already
+                    </ol>
+                    <p>So what are you waiting for?!</p>
+                    <br>
+                     
+                  </div>
+                </div>
+                <div class="row">
+                <div class="col-lg-12 text-center">
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdOxKPjQSJsB-EsOEM6b3vPkEZV1arukqz5cmImYAQiF67R_A/viewform" target="_blank" style="text-decoration:none"><i class="fa extra fa-bolt fa-4x" style="color:#33cc33;opacity:0.8" aria-hidden="true"></i><br>Apply Now!!</a>
+                </div>
+                </div>
+              </div>
+              
+                <div class="contacts">
+                </div>
+            </div>
+            </div>
+  </div>
       <div id="animatedModal">
          <!--"THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID-->
          <div  id="btn-close-modal" class="close-animatedModal"> 
@@ -285,6 +335,33 @@
           });
       $("#demo01").animatedModal( {
         animatedIn:'lightSpeedIn',
+        animatedOut: 'zoomOutLeft',
+        modelTarget: 'animatedModal',
+        color :'#141926',
+        zIndexOut: -1,
+        beforeOpen: function() {
+      
+                  var children = $(".thumb");
+                  var index = 0;
+      
+                  function addClassNextChild() {
+                      if (index == children.length) return;
+                      children.eq(index++).show().velocity("transition.slideRightIn", { opacity:1, stagger: 250 });
+                      window.setTimeout(addClassNextChild, 200);
+                  }
+      
+                  addClassNextChild();
+      
+              },
+              afterClose: function() {
+                $(".thumb").hide();
+                    
+              }
+      }
+        );
+       $("#demo02").animatedModal( {
+        animatedIn:'lightSpeedIn',
+        modelTarget: 'animatedModal2',
         animatedOut: 'zoomOutLeft', 
         color :'#141926',
         zIndexOut: -1,
